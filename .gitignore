@@ -1,0 +1,66 @@
+# Fichiers Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Environnement virtuel
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+*.env
+
+# Django migrations (optionnel si tu ne veux pas les versionner dès le début)
+**/migrations/
+!*/migrations/__init__.py
+
+# Fichiers de base de données
+*.sqlite3
+*.db
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE / éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers de logs
+*.log
+
+# Media et fichiers uploadés (si tu veux éviter d’upload ça sur Git)
+media/
+uploads/
+
+# Static files compilés
+staticfiles/
+static/
+
+# Test coverage
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Rapport de test
+junit.xml
+
+# fichiers de build Python
+build/
+develop-eggs/
+dist/
+eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# secrets (selon ton projet)
+secrets.json
+config.json
