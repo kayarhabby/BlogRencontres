@@ -3,8 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog de rencontre</title>
+    {% load static %} <!-- Load the static template tag -->
+    <link rel="stylesheet" href="{% static 'blog/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/index.css' %}">
 </head>
 <body>
-hello
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ANGEL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PAGES
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">TEAM</a></li>
+            <li><a class="dropdown-item" href="#">SERVICES</a></li>
+            <li><a class="dropdown-item" href="#">GALLERY</a></li>
+            <li><a class="dropdown-item" href="#">FAQS</a></li>
+            <li><a class="dropdown-item" href="#">404</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT US</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- slider content area -->
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'blog/images/made-for-each-other.jpg' %}" class="d-block w-100" alt="Made for each other image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>MADE FOR EACH OTHER</h5>
+        <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'blog/images/my-heart-is-yours.jpg' %}" class="d-block w-100" alt="My heart is yours image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>MY HEART IS YOURS</h5>
+        <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'blog/images/made-it-come-true.jpg' %}" class="d-block w-100" alt="Made it come true image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Made it come true</h5>
+        <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<main>
+    <section class="container">
+        <div class="blog-grid">
+            <div class="blog-image">
+                <img src="{% static 'blog/images/my-heart-is-yours.jpg' %}" alt="my-heart-is-yours">
+            </div>
+            <div class="blog-content">
+                <h2>MY HEART IS YOURS</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                <ul>
+                    <li>Just us, always</li>
+                    <li>Forever starts now</li>
+                    <li>Just us, always</li>
+                </ul>
+                <button class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script rel="text/javascript" src="{% static 'blog/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
