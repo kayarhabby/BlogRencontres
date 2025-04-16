@@ -1,10 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
 
-</body>
-</html>
+{% block title %}About{% endblock %}
+
+{% block content %}
+       <section>
+            <div class="blog-grid">
+                <div class="blog-image">
+                    <img src="{{ about_image_1 }}" alt="my-heart-is-yours">
+                </div>
+                <div class="blog-content">
+                    <h2>MY HEART IS YOURS</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                    <ul>
+                        <li>Just us, always</li>
+                        <li>Forever starts now</li>
+                        <li>Just us, always</li>
+                    </ul>
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+            </div>
+
+           <div class="blog-grid">
+                <div class="blog-content">
+                    <h2>MY HEART IS YOURS</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                    <ul>
+                        <li>Just us, always</li>
+                        <li>Forever starts now</li>
+                        <li>Just us, always</li>
+                    </ul>
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+                 <div class="blog-image">
+                    <img src="{{ about_image_2 }}" alt="my-heart-is-yours">
+                </div>
+           </div>
+
+            <div class="blog-grid">
+                <div class="blog-image">
+                    <img src="{{ about_image_3 }}" alt="my-heart-is-yours">
+                </div>
+                <div class="blog-content">
+                    <h2>MY HEART IS YOURS</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                    <ul>
+                        <li>Just us, always</li>
+                        <li>Forever starts now</li>
+                        <li>Just us, always</li>
+                    </ul>
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+            </div>
+
+       </section>
+{% endblock %}
