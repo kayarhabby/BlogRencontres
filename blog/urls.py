@@ -8,6 +8,8 @@ urlpatterns = [
     path("liste_blog/", views.liste_blog, name="liste_blog"),
     path("blog/<int:blog_id>/", views.blog_details, name="blog_details"),
 
+    path("contact/", views.contact, name="contact"),
+
 ]
 
 # Ajout de l'accès aux fichiers médias en mode développement
