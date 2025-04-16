@@ -38,7 +38,7 @@
           <a class="nav-link" href="#">BLOG</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CONTACT US</a>
+          <a class="nav-link" href="{% url 'blog:contact' %}">CONTACT US</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -91,7 +91,9 @@
 </div>
 
 <main>
-    <section class="container">
+
+    <div>
+        <section>
         <div class="blog-grid">
             <div class="blog-image">
                 <img src="{% static 'blog/images/my-heart-is-yours.jpg' %}" alt="my-heart-is-yours">
@@ -109,7 +111,80 @@
         </div>
     </section>
 
+    <section >
+        <div class="blog-grid">
+            <div class="blog-content">
+                <h2>MY HEART IS YOURS</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                <ul>
+                    <li>Just us, always</li>
+                    <li>Forever starts now</li>
+                    <li>Just us, always</li>
+                </ul>
+                <button class="btn btn-primary">Read More</button>
+            </div>
+             <div class="blog-image">
+                <img src="{% static 'blog/images/made-for-each-other.jpg' %}" alt="my-heart-is-yours">
+            </div>
+        </div>
+    </section>
+
+    <section >
+        <div class="blog-grid">
+            <div class="blog-image">
+                <img src="{% static 'blog/images/made-it-come-true.jpg' %}" alt="my-heart-is-yours">
+            </div>
+            <div class="blog-content">
+                <h2>MY HEART IS YOURS</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                <ul>
+                    <li>Just us, always</li>
+                    <li>Forever starts now</li>
+                    <li>Just us, always</li>
+                </ul>
+                <button class="btn btn-primary">Read More</button>
+            </div>
+        </div>
+    </section>
+    </div>
+
 </main>
+
+<footer>
+    <section class="footer-grid">
+        <div class="footer-content-flex">
+            <h2>ANGEL</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+        </div>
+        <div class="footer-content-flex">
+            <h2>CONTACT US</h2>
+            <p>(436) 345 5456</p>
+            <p>angel@gmail.com</p>
+            <p>1234 Street Name, City, State, USA</p>
+        </div>
+        <div class="footer-content-flex">
+            <h2> LINKS</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-content-flex">
+            <h2>FOLLOW US</h2>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="footer">
+        <p>© 2023 Blog de rencontre. All rights reserved.</p>
+    </div>
+</footer>
 
 <script rel="text/javascript" src="{% static 'blog/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
