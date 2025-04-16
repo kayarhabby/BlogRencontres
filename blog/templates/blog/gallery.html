@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Gallery {% endblock %}
+
+{% block content %}
+
+    <section class="gallery-grid">
+        {% for gallery in list_gallery %}
+            <div class="gallery-image">
+                <img src="{{ gallery.image.url }}" alt="gallery image">
+            </div>
+
+        {% endfor %}
+    </section>
+
+{% endblock %}

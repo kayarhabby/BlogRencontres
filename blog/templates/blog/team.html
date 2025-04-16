@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Team {% endblock %}
+
+{% block content %}
+
+<section class="card-grid">
+    {% for team in list_teams %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ team.image.url }}" alt="{{ team.name }}">
+          <div class="card-body">
+            <p class="card-text">{{ team.name }}</p>
+          </div>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}
