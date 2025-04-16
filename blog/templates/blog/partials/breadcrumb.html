@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<header class="breadcrumb-header" style="background-image: url('{{ banner_image }}');">
+  <div class="breadcrumb-overlay">
+    <h1>{{ title }}</h1>
+    <nav class="breadcrumb">
+      <a href="{% url 'blog:index' %}">Home</a>
+      {% if current_page %}
+        &nbsp;&gt;&nbsp;<span>{{ current_page }}</span>
+      {% endif %}
+    </nav>
+  </div>
+</header>
