@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
 from blog.forms import ContactForm
-from blog.models import Blog, Comments
+from blog.models import Blog, Comments, Team, Gallery
 from django.templatetags.static import static
 # Create your views here.
 
@@ -49,3 +49,21 @@ def about(request) :
         'about_image_3' : static('blog/images/you_make_my_heart_skip_a_bit.jpg'),
     }
     return render(request, 'blog/about.html', context)
+
+def team(request):
+    teams = Team.objects.all()
+    context = {
+        'title': 'Team',
+        'current_page': 'Team',
+        'list_teams': teams,
+    }
+    return render(request, 'blog/team.html', context)
+
+def gallery(request):
+    galleries = Gallery.objects.all()
+    context = {
+        'title': 'Gallery',
+        'current_page': 'Gallery',
+        'list_gallery': galleries,
+    }
+    return render(request, 'blog/gallery.html', context)
