@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Title{% endblock %}</title>
+   {% load static %} <!-- Load the static template tag -->
+    <link rel="stylesheet" href="{% static 'blog/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/index.css' %}">
 </head>
 <body>
+{% include 'blog/partials/navbar.html' %}
 
+{% include 'blog/partials/breadcrumb.html' %}
+<main>
+    {% block content %}
+    <!-- Content goes here -->
+    {% endblock %}
+</main>
+
+{% include 'blog/partials/footer.html' %}
+<script rel="text/javascript" src="{% static 'blog/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script rel="text/javascript" src="{% static 'blog/js/validation-form.js' %}"></script>
 </body>
 </html>
