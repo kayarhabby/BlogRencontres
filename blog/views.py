@@ -38,3 +38,14 @@ def contact(request):
         return redirect('blog:contact')  # Redirige après soumission réussie
 
     return render(request, 'blog/contact.html', context)
+
+def about(request) :
+    context = {
+        'title': 'About',
+        'current_page': 'About',
+        'banner_image': static('blog/images/my-heart-is-yours.jpg'),
+        'about_image_1' : static('blog/images/my-heart-is-yours.jpg'),
+        'about_image_2' : static('blog/images/life_is_better.jpg'),
+        'about_image_3' : static('blog/images/you_make_my_heart_skip_a_bit.jpg'),
+    }
+    return render(request, 'blog/about.html', context)
