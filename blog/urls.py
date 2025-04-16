@@ -10,12 +10,10 @@ urlpatterns = [
 
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
+    path("team/", views.team, name="team"),
+    path("gallery/", views.gallery, name="gallery"),
 
 ]
-
-# Ajout de l'accès aux fichiers médias en mode développement
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #urlpatterns = [
 #    path("", views.IndexView.as_view(), name="index"),
