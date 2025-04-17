@@ -15,17 +15,16 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{% url 'blog:team' %}">TEAM</a></li>
-            <li><a class="dropdown-item" href="#">SERVICES</a></li>
+            <li><a class="dropdown-item" href="{% url 'blog:service' %}">SERVICES</a></li>
             <li><a class="dropdown-item" href="{% url 'blog:gallery' %}">GALLERY</a></li>
-            <li><a class="dropdown-item" href="#">FAQS</a></li>
-            <li><a class="dropdown-item" href="#">404</a></li>
+            <li><a class="dropdown-item" href="{% url 'blog:error' %}">404</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'blog:about' %}">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">BLOG</a>
+          <a class="nav-link" href="{% url 'blog:liste_blog' %}">BLOG</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'blog:contact' %}">CONTACT US</a>
