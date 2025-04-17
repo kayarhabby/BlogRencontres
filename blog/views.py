@@ -95,6 +95,3 @@ def service(request):
         'service_image' : static('blog/images/made-it-come-true.jpg'),
     }
     return render(request, 'blog/service.html', context)
-
-def error(request):
-    return render(request, 'blog/error.html')
