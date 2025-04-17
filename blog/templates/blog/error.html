@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .error-page {
+            text-align: center;
+        }
+        .error-page h1 {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+        .error-page h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .error-page p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .error-page a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="error-page">
+        <h1>404</h1>
+        <h2>Page not found</h2>
+        <p>The page you are looking for does not exist.</p>
+        <a href="{% url 'blog:index' %}">Go back to the homepage</a>
+    </div>
+</main>
+</body>
+</html>
