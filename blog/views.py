@@ -3,18 +3,25 @@ from django.shortcuts import render, redirect, get_object_or_404
 from blog.forms import ContactForm
 from blog.models import Blog, Comments, Team, Gallery
 from django.templatetags.static import static
+# import paginator
+from django.core.paginator import Paginator
 # Create your views here.
 
 def index(request):
     return render(request, 'blog/index.html')
 
 def liste_blog(request):
-    liste_blogs = Blog.objects.all()
+    blogs = Blog.objects.all()
+    # Pagination
+    paginator = Paginator(blogs, 4)  # 4 blogs par page
+    page = request.GET.get('page')
+    liste_blogs  = paginator.get_page(page) # Récupérer la page demandée
     context = {
         'title': 'Blog',
         'current_page': 'Blog',
         'banner_image': static('blog/images/gallery/lookMeInTheEyes.jpg'),
-        'liste_blogs': liste_blogs
+        'liste_blogs': liste_blogs,
+ #       'blogs': blogs,
     }
     return render(request, 'blog/blog.html', context)
 

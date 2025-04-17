@@ -17,4 +17,24 @@
             </div>
         {% endfor %}
     </section>
+    <div class="pagination">
+        {% if liste_blogs.has_previous %}
+            <a href="?page={{ liste_blogs.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <span>Page {{ liste_blogs.number }} of {{ liste_blogs.paginator.num_pages }}</span>
+
+        {% if liste_blogs.has_next %}
+            <a href="?page={{ liste_blogs.next_page_number }}">Next</a>
+        {% endif %}
+    </div>
 {% endblock %}
+
+<!-- Pagination -->
+
+<!-- liste_blogs.has_previous : boolean , renvoie true ou false selon qu'il y a une page avant ou pas  -->
+<!-- liste_blogs.has_next : boolean , renvoie true ou false selon qu'il y a une page après ou pas  -->
+<!-- liste_blogs.number : int , current number  -->
+<!-- liste_blogs.paginator.num_pages : int , nombre total de page  -->
+<!-- liste_blogs.next_page_number : ajout +1 et passe à la page suivante  -->
+<!-- liste_blogs.previous_page_number : ajout -1 et passe à la page d'avant  -->
