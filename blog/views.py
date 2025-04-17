@@ -10,12 +10,20 @@ def index(request):
 
 def liste_blog(request):
     liste_blogs = Blog.objects.all()
-    context = {'liste_blogs': liste_blogs}
-    return render(request, 'blog/liste_blog.html', context)
+    context = {
+        'title': 'Blog',
+        'current_page': 'Blog',
+        'liste_blogs': liste_blogs
+    }
+    return render(request, 'blog/blog.html', context)
 
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    context = {'blog': blog}
+    context = {
+        'title': 'Blog',
+        'current_page': 'Blog',
+        'blog': blog
+    }
     return render(request, 'blog/blog_details.html', context)
 
 def commenter_blog(request, blog_id):
@@ -55,6 +63,7 @@ def team(request):
     context = {
         'title': 'Team',
         'current_page': 'Team',
+        'banner_image': static('blog/images/my-heart-is-yours.jpg'),
         'list_teams': teams,
     }
     return render(request, 'blog/team.html', context)
@@ -64,6 +73,19 @@ def gallery(request):
     context = {
         'title': 'Gallery',
         'current_page': 'Gallery',
+        'banner_image': static('blog/images/my-heart-is-yours.jpg'),
         'list_gallery': galleries,
     }
     return render(request, 'blog/gallery.html', context)
+
+def service(request):
+    context = {
+        'title': 'Service',
+        'current_page': 'Service',
+        'banner_image': static('blog/images/my-heart-is-yours.jpg'),
+        'service_image' : static('blog/images/made-it-come-true.jpg'),
+    }
+    return render(request, 'blog/service.html', context)
+
+def error(request):
+    return render(request, 'blog/error.html')
