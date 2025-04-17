@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Service{% endblock %}
+
+{% block content %}
+    <div class="service-container">
+    <section class="card-grid">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">Create Profile</h3>
+            <p class="card-text">It is long established fact that a reader will be readable a when looking at its layout.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">Find Match</h3>
+            <p class="card-text">It is long established fact that a reader will be readable a when looking at its layout.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">Start Dating</h3>
+            <p class="card-text">It is long established fact that a reader will be readable a when looking at its layout.</p>
+          </div>
+        </div>
+    </section>
+
+     <div class="blog-grid">
+                <div class="blog-content">
+                    <h2>MY HEART IS YOURS</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of page when looking at this</p>
+                    <ul>
+                        <li>Just us, always</li>
+                        <li>Forever starts now</li>
+                        <li>Just us, always</li>
+                    </ul>
+                    <button class="btn btn-primary">Read More</button>
+                </div>
+                 <div class="blog-image">
+                    <img src="{{ service_image }}" alt="my-heart-is-yours">
+                </div>
+           </div>
+    </div>
+
+
+{% endblock %}
