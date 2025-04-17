@@ -26,6 +26,5 @@ urlpatterns = [
 
 ]
 
-# Ajout de l'accès aux fichiers médias en mode développement
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Serve media files in development
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
