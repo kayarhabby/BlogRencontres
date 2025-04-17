@@ -3,15 +3,17 @@
 {% block title %} Blog {% endblock %}
 
 {% block content %}
-    <section class="blog-grid">
+    <section style="display: grid; grid-template-columns: 1fr 1fr ; gap : 20px;">
         {% for post in liste_blogs %}
-            <div class="blog-image">
-                <img src="{{ post.image.url }}" alt="{{ post.title }}">
-            </div>
-            <div class="blog-content">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.content|truncatewords:20 }}</p>
-                <a href="{% url 'blog:blog_details' post.id %}" class="btn btn-primary">Read More</a>
+            <div class="blog-grid-content">
+                <div class="blog-image">
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                </div>
+                <div class="blog-content">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.content|truncatewords:20 }}</p>
+                    <a href="{% url 'blog:blog_details' post.id %}" class="btn btn-primary">Read More</a>
+                </div>
             </div>
         {% endfor %}
     </section>
