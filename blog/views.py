@@ -13,6 +13,7 @@ def liste_blog(request):
     context = {
         'title': 'Blog',
         'current_page': 'Blog',
+        'banner_image': static('blog/images/gallery/lookMeInTheEyes.jpg'),
         'liste_blogs': liste_blogs
     }
     return render(request, 'blog/blog.html', context)
@@ -20,8 +21,9 @@ def liste_blog(request):
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     context = {
-        'title': 'Blog',
-        'current_page': 'Blog',
+        'title': 'Blog Details',
+        'current_page': 'Blog Details',
+        'banner_image': static('blog/images/gallery/reveals.jpg'),
         'blog': blog
     }
     return render(request, 'blog/blog_details.html', context)
