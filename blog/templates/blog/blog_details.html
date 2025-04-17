@@ -3,7 +3,13 @@
 {% block title %} Details Blog {% endblock %}
 
 {% block content %}
-<section>
-salut
+<section class="blog-grid">
+    <div class="blog-image">
+        <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+    </div>
+    <div class="blog-content">
+        <h2>{{ blog.title }}</h2>
+        <p>{{ blog.content }}</p>
+    </div>
 </section>
 {% endblock %}
