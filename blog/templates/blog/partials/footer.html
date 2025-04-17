@@ -13,10 +13,10 @@
         <div class="footer-content-flex">
             <h2> LINKS</h2>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                <li><a href="{% url 'blog:liste_blog' %}">Blog</a></li>
+                <li><a href="{% url 'blog:contact' %}">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-content-flex">

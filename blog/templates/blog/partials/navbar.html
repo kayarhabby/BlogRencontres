@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">ANGEL</a>
+    <a class="navbar-brand" href="{% url 'blog:index' %}">ANGEL</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,7 +17,6 @@
             <li><a class="dropdown-item" href="{% url 'blog:team' %}">TEAM</a></li>
             <li><a class="dropdown-item" href="{% url 'blog:service' %}">SERVICES</a></li>
             <li><a class="dropdown-item" href="{% url 'blog:gallery' %}">GALLERY</a></li>
-            <li><a class="dropdown-item" href="{% url 'blog:error' %}">404</a></li>
           </ul>
         </li>
         <li class="nav-item">
