@@ -5,13 +5,13 @@ from django.conf.urls.static import static
 app_name = 'blog'
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
-    path("liste_blog/", views.ListBlogView.as_view(), name="liste_blog"),
+    path("liste_blog/", views.BlogListView.as_view(), name="liste_blog"),
     path("<int:pk>/", views.BlogDetailView.as_view(), name="blog_details"),
 
     path("contact/", views.ContactFormView.as_view(), name="contact"),
     path("about/", views.AboutView.as_view(), name="about"),
-    path("team/", views.TeamView.as_view(), name="team"),
-    path("gallery/", views.GalleryView.as_view(), name="gallery"),
+    path("team/", views.TeamListView.as_view(), name="team"),
+    path("gallery/", views.GalleryListView.as_view(), name="gallery"),
     path("service/", views.ServiceView.as_view(), name="service"),
 
 ]

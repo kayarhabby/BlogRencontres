@@ -28,7 +28,7 @@ class IndexView(TemplateView):
 #    }
 #    return render(request, 'blog/blog.html', context)
 
-class ListBlogView(ListView):
+class BlogListView(ListView):
     model = Blog
     template_name = 'blog/blog.html'
     context_object_name = 'liste_blogs'
@@ -152,7 +152,7 @@ class AboutView(TemplateView):
 #    }
 #    return render(request, 'blog/team.html', context)
 
-class TeamView(ListView):
+class TeamListView(ListView):
     model = Team
     template_name = 'blog/team.html'
     context_object_name = 'list_teams'
@@ -188,7 +188,7 @@ class TeamView(ListView):
 #    return render(request, 'blog/gallery.html', context)
 
 
-class GalleryView(ListView):
+class GalleryListView(ListView):
     model = Gallery
     template_name = 'blog/gallery.html'
     context_object_name = 'list_gallery'
