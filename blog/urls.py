@@ -4,15 +4,15 @@ from . import views
 from django.conf.urls.static import static
 app_name = 'blog'
 urlpatterns = [
-    path("", views.index, name="index"),
-    path("liste_blog/", views.liste_blog, name="liste_blog"),
-    path("<int:blog_id>/", views.blog_details, name="blog_details"),
+    path("", views.IndexView.as_view(), name="index"),
+    path("liste_blog/", views.ListBlogView.as_view(), name="liste_blog"),
+    path("<int:pk>/", views.BlogDetailView.as_view(), name="blog_details"),
 
-    path("contact/", views.contact, name="contact"),
-    path("about/", views.about, name="about"),
-    path("team/", views.team, name="team"),
-    path("gallery/", views.gallery, name="gallery"),
-    path("service/", views.service, name="service"),
+    path("contact/", views.ContactFormView.as_view(), name="contact"),
+    path("about/", views.AboutView.as_view(), name="about"),
+    path("team/", views.TeamView.as_view(), name="team"),
+    path("gallery/", views.GalleryView.as_view(), name="gallery"),
+    path("service/", views.ServiceView.as_view(), name="service"),
 
 ]
 
